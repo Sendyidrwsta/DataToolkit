@@ -1,7 +1,19 @@
 # Changelog
 
-## v0.1.0
+## v0.1.0 - Initial Release
 
-- Initial release
+### Added
+
 - Complete Text Tools module
-- Refactor project structure
+- Character Counter
+- Word Counter
+- Text Transformation
+- Find & Replace
+- Remove Duplicate Line
+- Sort Lines
+
+### Changed
+
+- Refactored project structure
+- Moved menu logic into `menus/`
+- Moved text utilities into `tools/`
