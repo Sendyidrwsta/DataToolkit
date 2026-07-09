@@ -24,7 +24,7 @@ This project is developed as a personal learning portfolio while studying softwa
 
 #### File Tools
 
-- [ ] File Info
+- [x] File Info
 - [ ] Count Lines
 - [ ] Count Words
 - [ ] File Size

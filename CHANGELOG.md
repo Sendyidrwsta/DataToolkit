@@ -1,19 +1,27 @@
 # Changelog
 
-## v0.1.0 - Initial Release
+## v0.2.0 - Sprint 10
 
 ### Added
 
-- Complete Text Tools module
+- Added File Info tools.
+- Check file existence.
+- Get file name.
+- Get file extension.
+- Get absolute file path.
+
+---
+
+## v0.1.0 - Sprint 1–9
+
+### Added
+
 - Character Counter
 - Word Counter
-- Text Transformation
+- Uppercase
+- Lowercase
+- Title Case
+- Reverse Text
 - Find & Replace
-- Remove Duplicate Line
+- Remove Duplicate Lines
 - Sort Lines
-
-### Changed
-
-- Refactored project structure
-- Moved menu logic into `menus/`
-- Moved text utilities into `tools/`
