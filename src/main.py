@@ -1,20 +1,20 @@
+from menus.main_menu import run_main_menu
+from menus.file_menu import run_file_menu
 from menus.text_menu import run_text_menu
-from tools import file_tools as ft
 
 def main():
-    print("=== DataToolkit ===")
-    # run_text_menu()
+    while True:
+        pilihan = run_main_menu()
 
-    file_path = input("Masukkan path file: ")
-    info = ft.get_file_info(file_path)
-
-    if info["exists"]:
-        print("✅ File ditemukan!")
-        print("Nama file:", info["name"])
-        print("Ekstensi file:", info["extension"])
-        print("Path absolut:", info["absolute_path"])
-    else:
-        print("❌ File tidak ada atau bukan file.")
+        if pilihan == "1":
+            run_text_menu()
+        elif pilihan == "2":
+            run_file_menu()
+        elif pilihan == "0":
+            print("Keluar dari program...")
+            break
+        else:
+            print("Pilihan tidak valid, coba lagi.\n")
 
 
 if __name__ == "__main__":

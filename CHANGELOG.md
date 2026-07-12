@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.3.0 - Sprint 11
+
+### Added
+
+- Added Main Menu.
+- Added Text Menu.
+- Added File Menu.
+- Added menu navigation between application modules.
+
+### Changed
+
+- Refactored project structure into menu and tool layers.
+- Main application now uses a centralized navigation flow.
+
+---
+
 ## v0.2.0 - Sprint 10
 
 ### Added

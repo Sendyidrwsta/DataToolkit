@@ -95,9 +95,17 @@ DataToolkit/
 │
 ├── assets/
 ├── docs/
+│
 ├── src/
 │   ├── menus/
+│   │   ├── main_menu.py
+│   │   ├── text_menu.py
+│   │   └── file_menu.py
+│   │
 │   ├── tools/
+│   │   ├── text_tools.py
+│   │   └── file_tools.py
+│   │
 │   └── main.py
 │
 ├── tests/
@@ -152,20 +160,27 @@ This project is used to practice:
 - Data Processing
 - Problem Solving
 - Software Engineering Practices
+- CLI Application Architecture
+- Menu Navigation
 
 ---
 
 ## 🗺️ Roadmap
 
-Current Version
+### Completed
 
 - ✅ Text Tools
+- ✅ File Info
+- ✅ Main Menu Architecture
 
-Next Milestone
+### In Progress
 
 - 🚧 File Tools
+  - Count Lines
+  - Count Words
+  - File Size
 
-Future Plans
+### Planned
 
 - CSV Tools
 - JSON Tools
