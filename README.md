@@ -25,9 +25,9 @@ This project is developed as a personal learning portfolio while studying softwa
 #### File Tools
 
 - [x] File Info
-- [ ] Count Lines
-- [ ] Count Words
-- [ ] File Size
+- [x] Count Lines
+- [x] Count Words
+- [x] File Size
 
 #### CSV Tools
 
@@ -172,17 +172,24 @@ This project is used to practice:
 - ✅ Text Tools
 - ✅ File Info
 - ✅ Main Menu Architecture
+- ✅File Tools
+- ✅Count Lines
+- ✅Count Words
+- ✅File Size
 
 ### In Progress
 
-- 🚧 File Tools
-  - Count Lines
-  - Count Words
-  - File Size
+- 🚧 CSV Tools
+  - CSV Analyzer
+  - Merge CSV
+  - Split CSV
+  - Remove Duplicate Rows
+  - Search Data
+  - Filter Column
+
 
 ### Planned
 
-- CSV Tools
 - JSON Tools
 - Data Summary
 - Utility Tools

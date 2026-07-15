@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.4.0 - Sprint 12
+
+### Added
+
+- Added Count Lines tool.
+- Added Count Words tool.
+- Added File Size tool.
+- Added File Analysis wrapper.
+- Integrated File Analysis into File Menu.
+
 ## v0.3.0 - Sprint 11
 
 ### Added

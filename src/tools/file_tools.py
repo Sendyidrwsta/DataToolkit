@@ -26,6 +26,38 @@ def get_absolute_path(file_path: str) -> str:
     """
     return os.path.abspath(file_path)
 
+def count_lines(file_path: str) -> int | None:
+    """
+    Menghitung jumlah baris dalam sebuah file teks.
+    """
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            return len(f.readlines())
+    except (FileNotFoundError, OSError):
+        return None
+    
+def count_words(file_path: str) -> int | None :
+    """
+    Menghitung jumlah kata dalam sebuah file teks.
+    """
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            text = f.read()             
+            words = text.split()         
+            return len(words)            
+    except FileNotFoundError, OSError:
+        return None
+
+def get_file_size(file_path: str) -> int | None:
+    """
+    Mengembalikan ukuran file dalam byte.
+    Jika file tidak ditemukan atau error, return None.
+    """
+    try:
+        return os.path.getsize(file_path)
+    except (FileNotFoundError, OSError):
+        return None
+
 
 def get_file_info(file_path: str) -> dict:
     """
@@ -38,3 +70,13 @@ def get_file_info(file_path: str) -> dict:
         "absolute_path": get_absolute_path(file_path),
     }
     return info
+
+def get_file_analysis(file_path: str) -> dict:
+    """
+    Mengembalikan analisis file berupa jumlah baris, jumlah kata, dan ukuran file.
+    """
+    return {
+        "line_count": count_lines(file_path),
+        "word_count": count_words(file_path),
+        "file_size": get_file_size(file_path)
+    }

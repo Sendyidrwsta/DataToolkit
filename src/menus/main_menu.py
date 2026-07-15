@@ -7,12 +7,12 @@ def run_main_menu():
     """
     
     print("""
-    ===============
-    DATA TOOLKIT
-    ===============\n
-    1.Text Tools
-    2.File Tools
-    0. EXIT
+=================
+   DATA TOOLKIT
+=================\n
+1.Text Tools
+2.File Tools
+0. EXIT
     """)
     choice = input("Pilih :")
     return choice

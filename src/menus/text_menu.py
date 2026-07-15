@@ -4,9 +4,9 @@ def run_text_menu():
     while True:
 
         print("""
-===============
-  DATA TOOLKIT
-===============\n
+=================
+    TEXT TOOLS
+=================\n
 """)
 
         text_input = input("Masukkan text : ")
@@ -69,7 +69,11 @@ def run_text_menu():
 
         # pilihan setelah selesai
         while True:
-            print("\n=== Menu Text Selesai ===")
+            print("""
+=================
+MENU TEXT SELESAI
+=================\n
+        """)
             print("1. Ulangi Text Menu")
             print("0. Kembali ke Main Menu")
 
