@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.5.0 - Sprint 13 - CSV Analyzer
+
+### Added
+- Added CSV tools module.
+- Added CSV reader utility.
+- Added row count feature.
+- Added column count feature.
+- Added CSV summary.
+- Added CSV header reader.
+- Added CSV preview feature.
+- Added CSV menu.
+- Integrated CSV menu into the main application.
+
 ## v0.4.0 - Sprint 12
 
 ### Added

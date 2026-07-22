@@ -31,7 +31,7 @@ This project is developed as a personal learning portfolio while studying softwa
 
 #### CSV Tools
 
-- [ ] CSV Analyzer
+- [x] CSV Analyzer
 - [ ] Merge CSV
 - [ ] Split CSV
 - [ ] Remove Duplicate Rows
@@ -100,11 +100,13 @@ DataToolkit/
 │   ├── menus/
 │   │   ├── main_menu.py
 │   │   ├── text_menu.py
-│   │   └── file_menu.py
+│   │   ├── file_menu.py
+|   |   └── csv_menu.py
 │   │
 │   ├── tools/
 │   │   ├── text_tools.py
-│   │   └── file_tools.py
+│   │   ├── file_tools.py
+|   |   └── csv_tools.py
 │   │
 │   └── main.py
 │
@@ -176,11 +178,10 @@ This project is used to practice:
 - ✅Count Lines
 - ✅Count Words
 - ✅File Size
-
+- ✅CSV Analyzer
 ### In Progress
 
 - 🚧 CSV Tools
-  - CSV Analyzer
   - Merge CSV
   - Split CSV
   - Remove Duplicate Rows
