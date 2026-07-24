@@ -47,3 +47,39 @@ def get_csv_summary_from_data(data: list[list[str]]) -> dict:
         "column_count": count_columns_from_data(data)
     }
 
+def merge_csv(file1: str, file2: str, output_file: str) -> bool:
+    """
+    Menggabungkan dua file CSV dengan aturan:
+    - Kedua file harus memiliki header yang sama.
+    - Jika header berbeda, fungsi mengembalikan False.
+    - Header pada file kedua tidak ikut ditulis lagi.
+    - Output file otomatis diberi ekstensi .csv jika belum ada.
+    """
+    # pastikan output_file berakhiran .csv
+    if not output_file.lower().endswith(".csv"):
+        output_file += ".csv"
+
+    data1 = read_csv(file1)
+    data2 = read_csv(file2)
+
+    if not data1 or not data2:
+        return False
+
+    header1 = get_headers_from_data(data1)
+    header2 = get_headers_from_data(data2)
+
+    if header1 != header2:
+        return False
+
+    # gabungkan data (tanpa header kedua)
+    merged_data = [header1] + data1[1:] + data2[1:]
+
+    try:
+        with open(output_file, "w", encoding="utf-8", newline="") as fout:
+            writer = csv.writer(fout)
+            writer.writerows(merged_data)
+        return True
+    except (FileNotFoundError, OSError):
+        return False
+ 
+

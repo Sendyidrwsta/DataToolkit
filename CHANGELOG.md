@@ -1,5 +1,14 @@
 # Changelog
 
+## Sprint 14 - Merge CSV
+
+### Added
+- Added `merge_csv()` function.
+- Added header validation to ensure compatible CSV files.
+- Added automatic `.csv` extension for output files.
+- Added CSV file writing using Python's `csv.writer`.
+- Added Merge CSV option to the CSV Tools menu.
+
 ## v0.5.0 - Sprint 13 - CSV Analyzer
 
 ### Added
