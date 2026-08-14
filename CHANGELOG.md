@@ -1,5 +1,15 @@
 # Changelog
 
+## Sprint 15 - Split CSV
+
+### Added
+- Added CSV split feature.
+- Added streaming-based CSV processing to reduce memory usage.
+- Added configurable rows per output file.
+- Added automatic header preservation in each output file.
+- Added support for remaining rows in the final output file.
+- Added Split CSV option to the CSV Tools menu.
+
 ## Sprint 14 - Merge CSV
 
 ### Added

@@ -31,18 +31,11 @@ This project is developed as a personal learning portfolio while studying softwa
 
 #### CSV Tools
 
-[x] CSV Analyzer
-    - Read CSV files
-    - Count rows
-    - Count columns
-    - Display headers
-    - Preview CSV data
+[x] CSV Analyzer - Read CSV files - Count rows - Count columns - Display headers - Preview CSV data
 
-[x] Merge CSV
-    - Merge two CSV files into a new CSV file
-    - Validate matching headers
-    - Preserve original source files
-- [ ] Split CSV
+[x] Merge CSV - Merge two CSV files into a new CSV file - Validate matching headers - Preserve original source files
+
+- [x] Split CSV
 - [ ] Remove Duplicate Rows
 - [ ] Search Data
 - [ ] Filter Column

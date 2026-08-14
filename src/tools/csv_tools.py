@@ -81,5 +81,55 @@ def merge_csv(file1: str, file2: str, output_file: str) -> bool:
         return True
     except (FileNotFoundError, OSError):
         return False
- 
+
+
+def split_csv(source_file: str, rows_per_file: int, output_prefix: str = "split") -> bool:
+    """
+    Membagi file CSV besar tanpa memuat seluruh isi ke RAM.
+    - Header asli dipertahankan di setiap file hasil.
+    - rows_per_file harus > 0.
+    - Jika gagal baca/tulis file → False.
+    - Jika berhasil → True.
+    """
+    if rows_per_file <= 0:
+        return False
+
+    try:
+        with open(source_file, "r", encoding="utf-8") as fin:
+            reader = csv.reader(fin)
+
+            # baca header sekali
+            try:
+                header = next(reader)
+            except StopIteration:
+                return False  # file kosong
+
+            file_index = 1
+            rows_buffer = []
+
+            for row in reader:
+                rows_buffer.append(row)
+
+                # jika buffer penuh → tulis ke file baru
+                if len(rows_buffer) == rows_per_file:
+                    output_file = f"{output_prefix}_{file_index}.csv"
+                    with open(output_file, "w", encoding="utf-8", newline="") as fout:
+                        writer = csv.writer(fout)
+                        writer.writerow(header)
+                        writer.writerows(rows_buffer)
+                    file_index += 1
+                    rows_buffer = []
+
+            # tulis sisa data jika ada
+            if rows_buffer:
+                output_file = f"{output_prefix}_{file_index}.csv"
+                with open(output_file, "w", encoding="utf-8", newline="") as fout:
+                    writer = csv.writer(fout)
+                    writer.writerow(header)
+                    writer.writerows(rows_buffer)
+
+        return True
+
+    except (FileNotFoundError, OSError):
+        return False
 

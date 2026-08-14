@@ -8,6 +8,7 @@ def run_csv_menu():
 =================\n
 1. CSV Analyzer
 2. Merge CSV
+3. SPLIT CSV
 0. Back
         """)
         choice_csv_menus = input("Pilih : ")
@@ -49,6 +50,27 @@ def run_csv_menu():
                 print("\n✅ Berhasil menggabungkan file.")
             else:
                 print("\n❌ Gagal: header tidak cocok atau file error.")
+
+        elif choice_csv_menus == "3":
+            source_file = input("Masukkan path CSV: ")
+
+            try:
+                rows_per_file = int(input("Jumlah baris per file: "))
+            except ValueError:
+                print("\n❌ Jumlah baris harus berupa angka.")
+                continue
+            output_prefix = input("Prefix file output (tanpa .csv): ")
+
+            result_split = ct.split_csv(
+                source_file,
+                rows_per_file,
+                output_prefix
+            )
+
+            if result_split:
+                print("\n✅ Berhasil membagi file CSV.")
+            else:
+                print("\n❌ Gagal membagi file CSV.")
 
         elif choice_csv_menus == "0":
             return    # keluar ke main_menu
