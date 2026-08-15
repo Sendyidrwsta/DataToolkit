@@ -8,7 +8,8 @@ def run_csv_menu():
 =================\n
 1. CSV Analyzer
 2. Merge CSV
-3. SPLIT CSV
+3. Split CSV
+4. Remove Duplicates
 0. Back
         """)
         choice_csv_menus = input("Pilih : ")
@@ -44,16 +45,15 @@ def run_csv_menu():
             file2 = input("Masukkan path CSV kedua   : ")
             output_file = input("Masukkan nama/path file hasil : ")
 
-            result = ct.merge_csv(file1, file2, output_file)
-
-            if result:
+            merged = ct.merge_csv_data(file1, file2)
+            if merged:
+                ct.write_csv(output_file, merged)
                 print("\n✅ Berhasil menggabungkan file.")
             else:
                 print("\n❌ Gagal: header tidak cocok atau file error.")
 
         elif choice_csv_menus == "3":
             source_file = input("Masukkan path CSV: ")
-
             try:
                 rows_per_file = int(input("Jumlah baris per file: "))
             except ValueError:
@@ -61,16 +61,25 @@ def run_csv_menu():
                 continue
             output_prefix = input("Prefix file output (tanpa .csv): ")
 
-            result_split = ct.split_csv(
-                source_file,
-                rows_per_file,
-                output_prefix
-            )
-
+            result_split = ct.split_csv(source_file, rows_per_file, output_prefix)
             if result_split:
                 print("\n✅ Berhasil membagi file CSV.")
             else:
                 print("\n❌ Gagal membagi file CSV.")
+
+        elif choice_csv_menus == "4":
+            source_file = input("Masukkan path CSV: ")
+            output_file = input("Masukkan nama/path file hasil: ")
+
+            data = ct.read_csv(source_file)
+            if data:
+                clean = ct.remove_duplicate_rows(data)
+                if ct.write_csv(output_file, clean):
+                    print("\n✅ Berhasil menghapus duplikat dan menyimpan file.")
+                else:
+                    print("\n❌ Gagal menulis file hasil.")
+            else:
+                print("\n❌ File tidak ada atau bukan file CSV.")
 
         elif choice_csv_menus == "0":
             return    # keluar ke main_menu

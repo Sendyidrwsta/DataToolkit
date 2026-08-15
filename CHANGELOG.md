@@ -1,5 +1,17 @@
 # Changelog
 
+## [Sprint 16] - CSV Remove Duplicate Rows
+
+### Added
+- Added `remove_duplicate_rows()` to remove duplicate CSV rows.
+- Added `write_csv()` for reusable CSV output handling.
+- Added `get_rows_from_data()` to retrieve CSV data rows without the header.
+
+### Changed
+- Refactored CSV tools into I/O, analysis, and transformation sections.
+- Updated CSV menu with the Remove Duplicates feature.
+
+
 ## Sprint 15 - Split CSV
 
 ### Added
