@@ -37,7 +37,7 @@ This project is developed as a personal learning portfolio while studying softwa
 
 - [x] Split CSV
 - [x] Remove Duplicate Rows
-- [ ] Search Data
+- [X] Search Data
 - [ ] Filter Column
 
 #### JSON Tools

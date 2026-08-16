@@ -65,6 +65,27 @@ def get_csv_summary_from_data(data: list[list[str]]) -> dict:
         "column_count": count_columns_from_data(data)
     }
 
+def search_data(data: list[list[str]], keyword: str) -> list[list[str]]:
+    """
+    Mencari keyword pada seluruh kolom (case-insensitive).
+    - data: list of lists (hasil read_csv)
+    - keyword: string yang dicari
+    - return: list of lists berisi header + baris yang cocok
+    """
+    if not data or not keyword or keyword.strip() == "":
+        return []
+
+    header = data[0]
+    keyword_lower = keyword.strip().lower()
+    matched_rows = []
+
+    for row in data[1:]:
+        # cek apakah ada kolom yang mengandung keyword
+        if any(keyword_lower in cell.lower() for cell in row):
+            matched_rows.append(row)
+
+    return [header] + matched_rows if matched_rows else []
+
 
 # ======================
 # Bagian Transformasi

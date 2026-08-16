@@ -1,5 +1,23 @@
 # Changelog
 
+## [Sprint 17] - CSV Search Data
+
+### Added
+- Added `search_data()` to search keywords across all CSV columns.
+- Added case-insensitive keyword searching.
+- Added CSV Search Data option to the CSV Tools menu.
+
+### Changed
+- Added validation for empty and whitespace-only search keywords.
+- Improved error handling when the CSV file cannot be read.
+
+### Testing
+- Tested search with matching keywords.
+- Tested search with non-matching keywords.
+- Tested case-insensitive searches.
+- Tested empty and whitespace-only keywords.
+- Tested invalid or missing CSV file paths.
+
 ## [Sprint 16] - CSV Remove Duplicate Rows
 
 ### Added

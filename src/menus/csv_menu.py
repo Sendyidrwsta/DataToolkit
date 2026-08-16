@@ -10,6 +10,7 @@ def run_csv_menu():
 2. Merge CSV
 3. Split CSV
 4. Remove Duplicates
+5. SEARCH DATA 
 0. Back
         """)
         choice_csv_menus = input("Pilih : ")
@@ -81,6 +82,20 @@ def run_csv_menu():
             else:
                 print("\n❌ File tidak ada atau bukan file CSV.")
 
+        elif choice_csv_menus == "5":
+            source_file = input("Masukkan path CSV: ")
+            keyword = input("Masukkan Kata Yang ingin Dicari: ")
+
+            data = ct.read_csv(source_file)
+            if data is None:
+                print("File Tidak Ada Atau File Bukan CSV")
+            else:
+                result_search = ct.search_data(data, keyword)
+                if len(result_search) > 1:
+                    for row in result_search:
+                        print(", ".join(row))
+                else:
+                    print("Tidak Ada Hasil Yang Ditemukan")
         elif choice_csv_menus == "0":
             return    # keluar ke main_menu
 
