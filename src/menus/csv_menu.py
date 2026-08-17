@@ -11,6 +11,7 @@ def run_csv_menu():
 3. Split CSV
 4. Remove Duplicates
 5. SEARCH DATA 
+6  FILTER COLUMN
 0. Back
         """)
         choice_csv_menus = input("Pilih : ")
@@ -96,6 +97,42 @@ def run_csv_menu():
                         print(", ".join(row))
                 else:
                     print("Tidak Ada Hasil Yang Ditemukan")
+
+        elif choice_csv_menus == "6":
+            source_file = input("Masukkan path CSV: ")
+            data = ct.read_csv(source_file)
+
+            if data is None:
+                print("❌ File tidak ada atau bukan file CSV.")
+                continue
+
+            headers = ct.get_headers_from_data(data)
+            print("\nKolom yang tersedia:")
+            for i, h in enumerate(headers, start=1):
+                print(f"{i}. {h}")
+
+            try:
+                col_choice = int(input("\nPilih kolom (nomor): "))
+                if col_choice < 1 or col_choice > len(headers):
+                    print("❌ Pilihan kolom tidak valid.")
+                    continue
+                column = headers[col_choice - 1]
+            except ValueError:
+                print("❌ Input harus berupa angka.")
+                continue
+
+            value = input("Masukkan nilai yang ingin difilter: ")
+            result = ct.filter_column(data, column, value)
+
+            if result is None:
+                print("❌ Kolom tidak ditemukan.")
+            elif not result:
+                print("Tidak ada data yang cocok.")
+            else:
+                print("\n--- Hasil Filter ---")
+                for row in result:
+                    print(", ".join(row))
+
         elif choice_csv_menus == "0":
             return    # keluar ke main_menu
 

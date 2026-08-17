@@ -1,38 +1,54 @@
 # Changelog
 
-## [Sprint 17] - CSV Search Data
+## Sprint 18 - CSV Filter Column
 
 ### Added
+
+- Added filter_column() to filter CSV data by a specific column value.
+- Added case-insensitive column and value matching.
+- Added CSV Filter Column option to the CSV Tools menu.
+
+### Changed
+
+- Added column selection and validation in the CSV menu.
+- Added handling for invalid columns and unmatched filter values.
+
+---
+
+## Sprint 17 - CSV Search Data
+
+### Added
+
 - Added `search_data()` to search keywords across all CSV columns.
 - Added case-insensitive keyword searching.
 - Added CSV Search Data option to the CSV Tools menu.
 
 ### Changed
+
 - Added validation for empty and whitespace-only search keywords.
 - Improved error handling when the CSV file cannot be read.
 
-### Testing
-- Tested search with matching keywords.
-- Tested search with non-matching keywords.
-- Tested case-insensitive searches.
-- Tested empty and whitespace-only keywords.
-- Tested invalid or missing CSV file paths.
+---
 
-## [Sprint 16] - CSV Remove Duplicate Rows
+## Sprint 16 - CSV Remove Duplicate Rows
 
 ### Added
+
 - Added `remove_duplicate_rows()` to remove duplicate CSV rows.
 - Added `write_csv()` for reusable CSV output handling.
 - Added `get_rows_from_data()` to retrieve CSV data rows without the header.
 
 ### Changed
+
 - Refactored CSV tools into I/O, analysis, and transformation sections.
 - Updated CSV menu with the Remove Duplicates feature.
 
+---
 
 ## Sprint 15 - Split CSV
 
 ### Added
+
 - Added CSV split feature.
 - Added streaming-based CSV processing to reduce memory usage.
 - Added configurable rows per output file.
@@ -40,18 +56,24 @@
 - Added support for remaining rows in the final output file.
 - Added Split CSV option to the CSV Tools menu.
 
+---
+
 ## Sprint 14 - Merge CSV
 
 ### Added
+
 - Added `merge_csv()` function.
 - Added header validation to ensure compatible CSV files.
 - Added automatic `.csv` extension for output files.
 - Added CSV file writing using Python's `csv.writer`.
 - Added Merge CSV option to the CSV Tools menu.
 
+---
+
 ## v0.5.0 - Sprint 13 - CSV Analyzer
 
 ### Added
+
 - Added CSV tools module.
 - Added CSV reader utility.
 - Added row count feature.
@@ -62,6 +84,8 @@
 - Added CSV menu.
 - Integrated CSV menu into the main application.
 
+---
+
 ## v0.4.0 - Sprint 12
 
 ### Added
@@ -71,6 +95,8 @@
 - Added File Size tool.
 - Added File Analysis wrapper.
 - Integrated File Analysis into File Menu.
+
+---
 
 ## v0.3.0 - Sprint 11
 

@@ -145,3 +145,38 @@ def remove_duplicate_rows(data: list[list[str]]) -> list[list[str]]:
             unique_rows.append(row)
     return [header] + unique_rows
 
+def filter_column(data: list[list[str]], column: str, value: str) -> list[list[str]] | None:
+    """
+    Filter data berdasarkan nama kolom (case-insensitive).
+    - None → kolom tidak ditemukan
+    - []   → kolom valid, tapi tidak ada data yang cocok
+    - list → header + baris yang cocok
+    """
+    if not data :
+        return []
+
+    header = data[0]
+    # normalisasi input kolom dan value
+    column = column.strip().lower()
+    value = value.strip().lower()
+
+    if not column or not value:
+        return []
+
+    # cari index kolom
+    try:
+        col_index = next(i for i, h in enumerate(header) if h.strip().lower() == column)
+    except StopIteration:
+        return None  # kolom tidak ditemukan
+
+    matched_rows = []
+    for row in data[1:]:
+        if not row: 
+            continue
+        # cek panjang row agar tidak IndexError
+        if col_index < len(row):
+            if row[col_index].strip().lower() == value:
+                matched_rows.append(row)
+
+    return [header] + matched_rows if matched_rows else []
+

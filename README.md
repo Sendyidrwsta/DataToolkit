@@ -31,14 +31,14 @@ This project is developed as a personal learning portfolio while studying softwa
 
 #### CSV Tools
 
-[x] CSV Analyzer - Read CSV files - Count rows - Count columns - Display headers - Preview CSV data
+- [x] CSV Analyzer - Read CSV files - Count rows - Count columns - Display headers - Preview CSV data
 
-[x] Merge CSV - Merge two CSV files into a new CSV file - Validate matching headers - Preserve original source files
+- [x] Merge CSV - Merge two CSV files into a new CSV file - Validate matching headers - Preserve original source files
 
 - [x] Split CSV
 - [x] Remove Duplicate Rows
-- [X] Search Data
-- [ ] Filter Column
+- [x] Search Data
+- [x] Filter Column
 
 #### JSON Tools
 
@@ -181,19 +181,22 @@ This project is used to practice:
 - ✅Count Words
 - ✅File Size
 - ✅CSV Analyzer
+- ✅CSV Tools
+- ✅ Merge CSV
+- ✅Split CSV
+- ✅Remove Duplicate Rows
+- ✅Search Data
+- ✅Filter Column
 
 ### In Progress
 
-- 🚧 CSV Tools
-  - Merge CSV
-  - Split CSV
-  - Remove Duplicate Rows
-  - Search Data
-  - Filter Column
+- 🚧 JSON Tools
+- JSON Formatter
+- JSON Validator
+- JSON Minify
 
 ### Planned
 
-- JSON Tools
 - Data Summary
 - Utility Tools
 
