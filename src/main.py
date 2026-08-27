@@ -2,6 +2,7 @@ from menus.main_menu import run_main_menu
 from menus.file_menu import run_file_menu
 from menus.text_menu import run_text_menu
 from menus.csv_menu  import run_csv_menu
+from menus.json_menu import run_json_menu
 
 def main():
     while True:
@@ -13,6 +14,8 @@ def main():
             run_file_menu()
         elif pilihan == "3":
             run_csv_menu()
+        elif pilihan == "4":
+            run_json_menu()
         elif pilihan == "0":
             print("Keluar dari program...")
             break

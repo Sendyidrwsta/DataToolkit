@@ -10,9 +10,10 @@ def run_main_menu():
 =================
    DATA TOOLKIT
 =================\n
-1.Text Tools
-2.File Tools
-3.CSV  Tools
+1. Text Tools
+2. File Tools
+3. CSV  Tools
+4. JSON Tools
 0.EXIT
     """)
     choice = input("Pilih :")

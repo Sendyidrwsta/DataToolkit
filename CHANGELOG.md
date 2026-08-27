@@ -1,5 +1,23 @@
 # Changelog
 
+## [Sprint 19] - JSON Formatter
+
+### Added
+
+- Added `json_tools.py` for JSON file processing.
+- Added `read_json()` to read and parse JSON files.
+- Added `write_json()` for reusable JSON output handling.
+- Added `format_json()` to format JSON data with 4-space indentation.
+- Added JSON Tools menu.
+- Added JSON Formatter option to the JSON Tools menu.
+- Integrated JSON Tools into the Main Menu.
+
+### Changed
+
+- Added error handling for missing files, invalid JSON, and JSON write errors.
+- Added support for Unicode characters when formatting JSON.
+
+
 ## Sprint 18 - CSV Filter Column
 
 ### Added

@@ -42,7 +42,7 @@ This project is developed as a personal learning portfolio while studying softwa
 
 #### JSON Tools
 
-- [ ] JSON Formatter
+- [x] JSON Formatter
 - [ ] JSON Validator
 - [ ] JSON Minify
 
@@ -103,13 +103,14 @@ DataToolkit/
 │   │   ├── main_menu.py
 │   │   ├── text_menu.py
 │   │   ├── file_menu.py
-|   |   └── csv_menu.py
+|   |   ├── csv_menu.py
+|   |   └── json_menu.py
 │   │
 │   ├── tools/
 │   │   ├── text_tools.py
 │   │   ├── file_tools.py
-|   |   └── csv_tools.py
-│   │
+|   |   ├── csv_tools.py
+│   │   └── json_tools.py
 │   └── main.py
 │
 ├── tests/
