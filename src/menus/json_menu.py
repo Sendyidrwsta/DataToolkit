@@ -8,6 +8,7 @@ def run_json_menu():
     JSON TOOLS
 =================\n
 1. JSON Formatter
+2. JSON Validator
 0. Back
         """)
 
@@ -23,13 +24,20 @@ def run_json_menu():
                 print("\n--- Isi File JSON ---")
                 print(jt.format_json(data))
 
+        elif choice_json_menus == "2":
+            file_path = input("Masukkan nama file JSON: ")
+
+            if jt.validate_json(file_path):
+                print("✅ JSON valid.")
+            else:
+                print("❌ JSON tidak valid atau file tidak ditemukan.")
+
         elif choice_json_menus == "0":
             return
 
         else:
             print("❌ Pilihan tidak valid, coba lagi.")
             continue
-
         # === Post-menu setelah selesai ===
         while True:
             print("""

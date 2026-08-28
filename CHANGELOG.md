@@ -1,5 +1,18 @@
 # Changelog
 
+## [Sprint 20] - JSON Validator
+
+### Added
+
+- Added `validate_json()` to validate JSON files.
+- Added JSON Validator option to the JSON Tools menu.
+- Added validation handling for valid and invalid JSON files.
+
+### Changed
+
+- Added error handling for missing files and unreadable JSON files.
+- Added JSON syntax validation using Python's built-in `json` module.
+
 ## [Sprint 19] - JSON Formatter
 
 ### Added
@@ -16,7 +29,6 @@
 
 - Added error handling for missing files, invalid JSON, and JSON write errors.
 - Added support for Unicode characters when formatting JSON.
-
 
 ## Sprint 18 - CSV Filter Column
 

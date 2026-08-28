@@ -43,7 +43,7 @@ This project is developed as a personal learning portfolio while studying softwa
 #### JSON Tools
 
 - [x] JSON Formatter
-- [ ] JSON Validator
+- [x] JSON Validator
 - [ ] JSON Minify
 
 ### 📊 Data Summary
